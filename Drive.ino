@@ -1,3 +1,13 @@
+
+//This programme is written by @thameemk612
+
+
+//The function defined in this programme is
+//asper my connections. It may varie with
+//your choice. So I request to change the 'LOW'
+//and 'HIGH' values according to your connection
+
+
 char data=0;  //variable for storing recieved data
 
 //Right Side
@@ -32,4 +42,50 @@ void loop(){
     else if (data== 's') //Stop the Robo
       Stop();
   }
+}
+
+// Forward Function
+void forward(){
+  Serial.print("forward"); //to print on monitor
+  digitalWrite(C1A, HIGH);
+  digitalWrite(C1B, LOW);
+  digitalWrite(C2A, HIGH);
+  digitalWrite(C2B, LOW);
+
+}
+
+//Backward Function
+void backward(){
+  Serial.print("backward"); //to print on monitor
+  digitalWrite(C1A, LOW);
+  digitalWrite(C1B, HIGH);
+  digitalWrite(C2A, LOW);
+  digitalWrite(C2B, HIGH);
+}
+
+// Left Function
+void left(){
+  Serial.print("Left"); //to print on monitor
+  digitalWrite(C1A, LOW);
+  digitalWrite(C1B, HIGH);
+  digitalWrite(C2A, HIGH);
+  digitalWrite(C2B, LOW);
+}
+
+//Right Funtion
+void right(){
+  Serial.print("Right"); //to print on monitor
+  digitalWrite(C1A, HIGH);
+  digitalWrite(C1B, LOW);
+  digitalWrite(C2A, LOW);
+  digitalWrite(C2B, HIGH);
+}
+
+//Stop Sunction
+void Stop(){
+  Serial.print("Stop"); //to print on monitor
+  digitalWrite(C1A, LOW);
+  digitalWrite(C1B, LOW);
+  digitalWrite(C2A, LOW);
+  digitalWrite(C2B, LOW);
 }
